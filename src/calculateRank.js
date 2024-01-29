@@ -45,7 +45,7 @@ function calculateRank({
   followers,
 }) {
   const COMMITS_MEDIAN = all_commits ? 1000 : 250,
-    COMMITS_WEIGHT = 2;
+    COMMITS_WEIGHT = 5;
   const PRS_MEDIAN = 50,
     PRS_WEIGHT = 3;
   const ISSUES_MEDIAN = 25,
@@ -66,7 +66,7 @@ function calculateRank({
     FOLLOWERS_WEIGHT;
 
   const THRESHOLDS = [1, 12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100];
-  const LEVELS = ["S", "A+", "A", "A-", "B+", "B", "B-", "C+", "C"];
+  const LEVELS = ["S", "A+", "A+", "A-", "A-", "A", "A", "C+", "C"];
 
   const rank =
     1 -
